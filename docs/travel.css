@@ -70,9 +70,6 @@ section {
     max-height: 400px;
     max-width: 70%;
 }
-.destination-card *{
-    border: 1px solid #000000;
-}
 .destination-card:hover {
     transform: scale(1.05);
 }
