@@ -15,7 +15,7 @@ body {
     align-self: center;
 }
 .container-intro {
-    width: 90%;
+    width: 100%;
     margin:  auto;
     max-height: 450px;
 }
@@ -73,6 +73,7 @@ main {
     margin: 0;
     color: #f0edcf;
     font-weight: 900;
+    text-decoration: underline;
 }
 
 .destination-card {
@@ -84,10 +85,7 @@ main {
     transition: transform 0.2s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-height: 400px;
-    max-width: 70%;
-}
-.destination-card *{
-    border: 1px solid;
+    max-width: 75%;
 }
 .destination-card:hover {
     transform: scale(1.05);
@@ -100,19 +98,23 @@ main {
 .destination-card .content {
     width: 50%;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     flex-wrap: wrap;
 }
 
 .content .city{
     text-align: center;
     font-size: 18pt;
-    color: white;
+    color: #f0edcf;
 }
 .content .link{
     text-align: center;
     color: #000000;
     justify-content: center;
+}
+.brief{
+    color: #f0edcf;
+    margin-left: 10px;
 }
 
 footer {
