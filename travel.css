@@ -147,6 +147,35 @@ main {
         margin-left: 35%;
     }
 }
+@media (min-width: 481px) and (max-width:716px)
+{
+    .destination-card{
+        display: block;
+        max-width: 85%;
+    }
+    .destination-card img {
+        max-width: 80%;
+        height: auto;
+        margin-left: 10%;
+        float: left;
+    }
+    .destination-card .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap
+    }
+    .content .link{
+        text-align: center;
+        color: #000000;
+        margin-left: 35%;
+    }
+    .content .city{
+        margin: 3px;
+    }
+    .brief{
+        margin: 3px;
+    }
+}
 .content .link{
     text-align: center;
     color: #000000;
