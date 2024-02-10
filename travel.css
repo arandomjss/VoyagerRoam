@@ -84,7 +84,7 @@ main {
     margin: 20px 20px 20px 5%;
     transition: transform 0.2s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-height: 400px;
+    max-height: 350px;
     max-width: 75%;
 }
 .destination-card:hover {
@@ -107,6 +107,46 @@ main {
     font-size: 18pt;
     color: #f0edcf;
 }
+@media (min-width: 319px) and (max-width:480px)
+    { 
+        .vr{
+            text-align: center;
+        }
+    nav ul li{
+        display: flex;
+        justify-content: center;
+      
+    }
+    .container {
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li a {
+        text-align: center;
+    }
+    .foot-container img{
+        width: 80%;
+    }
+    .destination-card{
+        display: block;
+    }
+    .destination-card img {
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+    }
+    .destination-card .content {
+        width: 90%;
+        display: block;
+        margin-left: 5%;
+    }
+    .content .link{
+        text-align: center;
+        color: #000000;
+        margin-left: 35%;
+    }
+}
 .content .link{
     text-align: center;
     color: #000000;
@@ -114,7 +154,7 @@ main {
 }
 .brief{
     color: #f0edcf;
-    margin-left: 10px;
+   font-size: large;
 }
 
 footer {
