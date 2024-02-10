@@ -156,7 +156,7 @@ main {
     .destination-card img {
         max-width: 80%;
         height: auto;
-        margin-left: 10%;
+        margin-left: 25%;
         float: left;
     }
     .destination-card .content {
