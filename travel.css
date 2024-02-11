@@ -3,6 +3,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #0b60b0;
 }
+body *{
+    border: 1px solid;
+}
 .container {
     border: 1px solid;
     display: flex;
@@ -62,11 +65,6 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-
-main {
-    padding: 20px 0;
-}
-
 .destination-header{
     font-size: 2rem;
     text-align: center;
@@ -174,6 +172,37 @@ main {
     }
     .brief{
         margin: 3px;
+    }
+}
+@media (min-width: 717px) 
+{
+    .card-holder{
+        display: flex;
+        max-width: 100%;
+    }
+    .destination-card{
+        display: block;
+        max-width: 85%;
+        max-height: 550px;
+    }
+    .destination-card img {
+        height: auto;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .destination-card .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap
+    }
+    .content .city{
+        margin: 3px;
+    }
+    .brief{
+        margin: 3px;
+    }
+    #tokyo{
+        padding-bottom: 35px;
     }
 }
 .content .link{
