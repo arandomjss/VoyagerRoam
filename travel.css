@@ -3,9 +3,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #0b60b0;
 }
-body *{
-    border: 1px solid;
-}
 .container {
     border: 1px solid;
     display: flex;
