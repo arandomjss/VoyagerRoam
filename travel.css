@@ -247,6 +247,7 @@ nav ul li a:hover {
     text-align: center;
     color: #000000;
     justify-content: center;
+    margin-top: 3px;
 }
 .brief{
     color: #f0edcf;
