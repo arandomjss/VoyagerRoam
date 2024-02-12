@@ -171,11 +171,52 @@ nav ul li a:hover {
         margin: 3px;
     }
 }
-@media (min-width: 717px) 
+@media (min-width: 717px) and (max-width:1000px)
 {
     .card-holder{
         display: flex;
         max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container-card{
+        width: 33%;
+    }
+    .destination-card{
+        display: block;
+        max-width: 85%;
+        max-height: 550px;
+    }
+    .destination-card img {
+        height: auto;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .destination-card .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap
+    }
+    .content .city{
+        margin: 3px;
+    }
+    .brief{
+        margin: 3px;
+    }
+    #tokyo{
+        padding-bottom: 35px;
+    }
+}
+@media (min-width: 1000px)
+{
+    .card-holder{
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container-card{
+        width: 24.8%;
     }
     .destination-card{
         display: block;
