@@ -75,6 +75,7 @@ nav ul li a:hover {
 .mainimg{
     float: left;
     height: 300px;
+    width: auto;
 }
 .nickname{
     text-align: center;
@@ -128,6 +129,16 @@ nav ul li a:hover {
     }
     nav ul li a {
         text-align: center;
+    }
+    .mainimg{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-width: 481px) and (max-width:600px)
+{
+    .mainimg{
+        width: 100%;
     }
 }
 footer {
