@@ -43,8 +43,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: none;
-    background-color: darkslategray;
+    font-size: 1.2rem;
+    color: white;
+    padding-bottom: 7px;
+    transition: 0.5s;
 }
 
 .content-main{

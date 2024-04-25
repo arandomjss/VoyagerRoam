@@ -15,6 +15,7 @@ body {
     align-self: center;
 }
 .container-intro {
+    display: flex;
     width:100%;
     height: 90vh;
     background-image: url("./images/pexels-pixabay-206359.jpg");
@@ -60,7 +61,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    font-size: 1.2rem;
+    color: white;
+    padding-bottom: 7px;
+    transition: 0.5s;
 }
 .destination-header{
     font-size: 2rem;
@@ -96,7 +100,21 @@ nav ul li a:hover {
     flex-direction:column;
     flex-wrap: wrap;
 }
-
+.link{
+    text-align: center;
+    color: #f0edcf;
+    margin-left: 35%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 5px;
+    width: max-content;
+    background-color: #40a2db;
+    border: 2px solid #f0edcf;
+}
+.link:hover{
+    background-color: #f0edcf;
+    color: #40a2db;
+}
 .content .city{
     text-align: center;
     font-size: 18pt;
@@ -138,7 +156,6 @@ nav ul li a:hover {
     }
     .content .link{
         text-align: center;
-        color: #000000;
         margin-left: 35%;
     }
 }
@@ -161,7 +178,6 @@ nav ul li a:hover {
     }
     .content .link{
         text-align: center;
-        color: #000000;
         margin-left: 35%;
     }
     .content .city{
@@ -245,7 +261,6 @@ nav ul li a:hover {
 }
 .content .link{
     text-align: center;
-    color: #000000;
     justify-content: center;
     margin-top: 3px;
 }
