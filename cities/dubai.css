@@ -144,9 +144,79 @@ nav ul li a:hover {
         width: 100%;
     }
 }
-footer {
-    background-color: #000000;
-    color: #fff;
+#footer {
+    background-color: black;
+    color: #40a2db;
     padding: 20px 0;
+}
+
+.foot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+}
+
+.footer-links,
+.social-media,
+.footer-nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a,
+.social-media a,
+.footer-nav a {
+    color: #40a2db;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media img {
+    margin-top: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.newsletter {
+    margin: 10px 0; 
+    color: #ffffff;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+}
+
+.newsletter button {
+    padding: 10px;
+    border: none;
+    background-color: #e8491d;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.footer-nav {
+    margin: 20px 0;
+}
+.footer-links a:hover,
+.footer-nav a:hover {
+    font-size: 1.2rem;
+    color: white;
+    padding-bottom: 7px;
+    transition: 0.5s;
+}
+.social-media a:hover,
+.social-media img:hover{
+    transform: scale(1.1);
 }
