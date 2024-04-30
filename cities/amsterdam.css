@@ -39,7 +39,6 @@ nav ul li {
 nav ul li a {
     color: #40a2db;
     text-decoration: none;
-    border: 0;
     font-size: larger;
 }
 
@@ -59,6 +58,81 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+
+.main-card{
+    display: block;
+    border: 1px solid #f0edcf;
+    background-color: #40a2db;
+    padding: 20px;
+    margin: 5% 10% 5% 10%;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    height: auto;
+}
+.city-head{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    color: #f0edcf;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.content-card{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5px;
+    height: 90%;
+}
+
+.mainimg{
+    float: left;
+    height: 300px;
+    width: auto;
+}
+.nickname{
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    color: #f0edcf;
+    font-weight: 900;
+    text-decoration: underline;
+    height: 10%;
+}
+.first{
+    position: relative;
+    left: 4%;
+}
+
+.content-card .second {
+    position: relative;
+    left: 4%;
+    margin: 2%;
+}
+.content-card p{
+    color: #e7e4c7;
+    margin: 5%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.third{
+    margin: 2%;
+}
+.list{
+    color: #e7e4c7;
+    margin: 1% 5% 5% 7%;
+    font-size: 1.2rem;
+}
+.list li{
+    margin-bottom: 2%
+}
+.pointer{
+    font-weight: bold;
+    text-decoration: underline;
+}
 @media (min-width: 319px) and (max-width:480px)
     { 
         .vr{
@@ -76,90 +150,24 @@ nav ul li a:hover::after{
     }
     nav ul li a {
         text-align: center;
-        text-decoration: none;
+    }
+    .mainimg{
+        width: 100%;
+        height: auto;
     }
 }
- 
-  h1, h2 {
-    margin-bottom: 10px;
-  }
-  h2{
-    color: #f0edcf;
-    text-align: center;
-    font-size: xx-large;
-    margin-top: 2%;
-    margin-bottom: 3%;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .destination-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .destination {
-    background-color: #40a2db;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
-    border: 2px solid #f0edcf;
-  }
-  
-  .destination img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .destination:hover {
-    transform: scale(1.02);
-  }
-  
-  article a {
-    text-decoration: none;
-    color: #f0edcf;
-    padding: 5px 10px;
-    border: 1px solid #f0edcf;
-    border-radius: 3px;
-    margin-top: 10px;
-    display: inline-block;
-  }
-  article a:hover {
-    background-color: #f0edcf;
-    color: #40a2db;
-  }
-  footer {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-  }
-  article img{
-    height: 300px;
-  }
-  @media (min-width: 319px) and (max-width:480px)
-  {
-    article img{
-      height: 200px;
+@media (min-width: 481px) and (max-width:600px)
+{
+    .mainimg{
+        width: 100%;
     }
-  }
-    @media (min-width: 481px) and (max-width:768px)
-    {
-        article img{
-        height: 250px;
-        }
+}
+@media (min-width: 601px) and (max-width: 700px)
+{
+    .mainimg{
+        width: 100%;
     }
-    @media (min-width: 769px) and (max-width:1024px)
-    {
-        article img{
-        height: 250px;
-        }
-    }
+}
 #footer {
     background-color: black;
     color: #40a2db;
