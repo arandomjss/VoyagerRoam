@@ -112,7 +112,7 @@ nav ul li a:hover {
     font-size: 1.2rem;
     color: white;
     padding-bottom: 7px;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 .destination-header{
     font-size: 2rem;
@@ -381,7 +381,9 @@ nav ul li a:hover {
     color: #ffffff;
     cursor: pointer;
 }
-
+.newsletter button:hover{
+    transform: scale(1.1);
+}
 .footer-nav {
     margin: 20px 0;
 }
@@ -390,9 +392,9 @@ nav ul li a:hover {
     font-size: 1.2rem;
     color: white;
     padding-bottom: 7px;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 .social-media a:hover,
 .social-media img:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }

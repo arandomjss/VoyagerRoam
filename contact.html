@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact - Form</title>
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="headcontainer">
             <div class="vr"><h1>VoyagerRoam</h1>
             </div>
             <div class="logo"><img src="./logos/voyagerroam-favicon-color.png" alt="Logo" height="75px">
@@ -23,19 +23,69 @@
             </nav>
         </div>
     </header>
-    <div class="contain-main">
-        <h2 class="contact-head"> Get in touch!</h2>
-        <div class="contact-card">
-            <div class="imageheads">
-                <img src="./images/contactimgs/contact.png" alt="contact" height="200px" width="auto">
-            </div>
-            <div class="imagelinks">
-                <img id="insta" src="./images/contactimgs/instagram-1-svgrepo-com.svg" alt="instagram">
-                <img id="twitter" src="./images/contactimgs/twitter-svgrepo-com.svg" alt="twitter">
-                <img id="dc" src="./images/contactimgs/discord-svgrepo-com.svg" alt="discord">
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="text-center">
+			<h1>Contact Us</h1>
+			<div>
+				We really appreciate you contacting us! Regarding your experience with the website or you want to add more deatils to some guides. Anything goes!
+			</div>
+		</div>
+		<div class="content">
+			<div class="col-1">
+				<div class="address-line">
+					<img alt="location" src="./images/contactimgs/icons8-address-32.png" class="icon">
+					<div class="contact-info">
+						<div class="contact-info-title">Address</div>
+						<div>42 Vatican City,Naroda</div>
+						<div>Gujurat, Ahmedabad,</div>
+						<div>55060.</div>
+					</div>
+				</div>
+				<div class="address-line">
+					<img alt="location" src="./images/contactimgs/icons8-call-32.png" class="icon">
+					<div class="contact-info">
+						<div class="contact-info-title">Phone</div>
+						<div>+91738733529.</div>
+					</div>
+				</div>
+				<div class="address-line">
+					<img alt="location" src="./images/contactimgs/icons8-email-32.png" class="icon">
+					<div class="contact-info">
+						<div class="contact-info-title">Email</div>
+						<div>arandomjss@gmail.com</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-2">
+				<form>
+					<div class="form-container">
+						<h2>Send Message</h2>
+						<div class="form-row">
+							<label>Full Name</label>
+							<div>
+								<input type="text" class="form-field">
+							</div>
+						</div>
+						<div class="form-row">
+							<label>Email</label>
+							<div>
+								<input type="text" class="form-field">
+							</div>
+						</div>
+						<div class="form-row">
+							<label>Type your message...</label>
+							<div>
+								<input type="text" class="form-field">
+							</div>
+						</div>
+						<input type="button" class="send-btn" value="Send">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
     <footer id="footer">
         <div class="foot-container">
             <img src="./logos/voyagerroam-high-resolution-logo-transparent.png" alt="logo" height="100px">
@@ -58,7 +108,7 @@
             </div>
             <div class="footer-nav">
                 <a href="./index.html">Home</a>
-                <a href="#destinations">Destinations</a>
+                <a href="./destinations.html">Destinations</a>
                 <a href="./contact.html">Contact</a>
             </div>
             <p>&copy; 2022 VoyagerRoam. All rights reserved.</p>

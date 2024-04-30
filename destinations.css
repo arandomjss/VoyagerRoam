@@ -46,7 +46,7 @@ nav ul li a:hover {
     font-size: 1.2rem;
     color: white;
     padding-bottom: 7px;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 
 @media (min-width: 319px) and (max-width:480px)

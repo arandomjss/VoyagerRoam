@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #0b60b0;
 }
-.container {
+
+.headcontainer {
     border: 1px solid;
     display: flex;
     justify-content: space-between;
@@ -46,62 +47,116 @@ nav ul li a:hover {
     font-size: 1.2rem;
     color: white;
     padding-bottom: 7px;
-    transition: 0.5s;
+    transition: 1.5s;
+}
+.container {
+    background-image: url('./images/contactimgs/background.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100%;
+	margin: 0px auto;
+	color: black;
+	line-height: 1.5;
 }
 
-.content-main{
-    width: 100%;
+.text-center {
+	text-align: center;
+    background-color: #f0edcf;
+    border-radius: 30px;
+    border: 2px solid black;
 }
 
-.contact-head{
-
-    text-align: center;
-    font-size: 2rem;
-    margin: 0;
-    margin-top: 5%;
-    color: #f0edcf;
-    font-weight: 900;
-    text-decoration: underline;
-}
-.contact-card{
-    width: 80%;
-    max-width: 700px;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    height: 75vh;
-    display: block;
-    border: 1px solid #f0edcf;
-    background-color: #40a2db;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.content {
+	display: flex;
+	margin-top: 40px;
 }
 
-.imageheads{
-    margin-left: 10%;
-    margin-bottom: 2%;
-    width: 80%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
+.icon {
+	background-color: #f0edcf;
+	border-radius: 30px;
+	padding: 15px;
+	vertical-align: top;
+    border: 2px solid black;
 }
-.imagelinks{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
 
+.contact-info {
+    border: 2px solid black;
+    background-color: #f0edcf;
+	display: inline-block;
+	padding: 4px 20px 0px 20px;
+    border-radius: 30px;
 }
-#insta{
-    max-height: 100px;
+
+.address-line {
+	margin-top: 40px;
 }
-#twitter{
-    max-height: 100px;
+
+.col-1 {
+	width: 530px;
 }
-#dc{
-    max-height: 100px;
+
+.col-2 {
+	flex: 1 1 auto;
+	background-color: #f0edcf;
 }
+
+.form-container {
+	color: #000;
+	padding: 30px;
+    border: 2px solid black;
+}
+
+.contact-info-title {
+	color: black;
+}
+
+.form-row {
+	padding-bottom: 30px;
+}
+
+.form-field {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+
+.send-btn {
+	border: 1px solid #0b60b0;
+	padding: 12px 26px;
+	background-color: #40a2db;
+	color: white;
+}
+
+@media all and (max-width: 1024px) {
+	.container {
+		width: auto;
+		padding: 30px;
+	}
+	 .col-1 {
+		width: 360px;
+	} 
+}
+
+@media all and (max-width: 700px) {
+	.content {
+		display: block;
+	}
+	.col-2 {
+		margin-top: 40px;
+	} 
+	.col-1{
+	width:100%;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.container {
+		padding: 10px;
+	}
+}
+
 @media (min-width: 319px) and (max-width:480px)
     { 
         .vr{
@@ -192,7 +247,7 @@ nav ul li a:hover {
     font-size: 1.2rem;
     color: white;
     padding-bottom: 7px;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 .social-media a:hover,
 .social-media img:hover{
