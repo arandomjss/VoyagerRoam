@@ -39,16 +39,24 @@ nav ul li {
 nav ul li a {
     color: #40a2db;
     text-decoration: none;
-    padding: 10px;
 }
 
 nav ul li a:hover {
     font-size: 1.2rem;
     color: white;
-    padding-bottom: 7px;
     transition: 1.5s;
 }
-
+nav ul li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
 @media (min-width: 319px) and (max-width:480px)
     { 
         .vr{

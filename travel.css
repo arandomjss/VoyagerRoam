@@ -106,12 +106,23 @@ nav ul li {
 nav ul li a {
     color: #40a2db;
     text-decoration: none;
+    font-size: larger;
+}
+nav ul li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
 }
 
 nav ul li a:hover {
     font-size: 1.2rem;
     color: white;
-    padding-bottom: 7px;
     transition: 1.5s;
 }
 .destination-header{
@@ -151,7 +162,7 @@ nav ul li a:hover {
 .link{
     text-align: center;
     color: #f0edcf;
-    margin-left: 35%;
+    margin-left: 25%;
     font-size: 1.5rem;
     text-decoration: none;
     padding: 5px;
@@ -391,9 +402,9 @@ nav ul li a:hover {
 .footer-nav a:hover {
     font-size: 1.2rem;
     color: white;
-    padding-bottom: 7px;
     transition: 1.5s;
 }
+
 .social-media a:hover,
 .social-media img:hover{
     transform: scale(1.2);

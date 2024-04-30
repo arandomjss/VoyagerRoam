@@ -41,13 +41,24 @@ nav ul li a {
     color: #40a2db;
     text-decoration: none;
     padding: 10px;
+    font-size: larger;
 }
 
 nav ul li a:hover {
     font-size: 1.2rem;
     color: white;
-    padding-bottom: 7px;
     transition: 1.5s;
+}
+nav ul li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
 }
 .container {
     background-image: url('./images/contactimgs/background.png');
@@ -57,33 +68,43 @@ nav ul li a:hover {
 	background-attachment: fixed;
 	width: 100%;
 	margin: 0px auto;
-	color: black;
+	color: white;
 	line-height: 1.5;
+    padding: 30px 30px 50px 30px; 
+    justify-content: space-around;
 }
 
 .text-center {
 	text-align: center;
-    background-color: #f0edcf;
+    backdrop-filter: blur(5px)  saturate(180%);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 30px;
-    border: 2px solid black;
+    color: white;
+    padding: 15px;
+    border: 2px solid white;
+    margin-right: 4%;
 }
 
 .content {
+    color: white;
 	display: flex;
 	margin-top: 40px;
+    justify-content: space-around;
+    margin-right: 2%
 }
 
 .icon {
-	background-color: #f0edcf;
+	backdrop-filter: blur(5px) saturate(180%);
 	border-radius: 30px;
 	padding: 15px;
 	vertical-align: top;
-    border: 2px solid black;
+    border: 2px solid white;
 }
 
 .contact-info {
-    border: 2px solid black;
-    background-color: #f0edcf;
+    color: white;
+    border: 2px solid white;
+    backdrop-filter: blur(5px) saturate(180%);
 	display: inline-block;
 	padding: 4px 20px 0px 20px;
     border-radius: 30px;
@@ -95,21 +116,31 @@ nav ul li a:hover {
 
 .col-1 {
 	width: 530px;
+    backdrop-filter: blur(5px) saturate(180%);
+    border-radius: 30px;
+    padding: 15px;
+    border: 2px solid white;
 }
 
 .col-2 {
 	flex: 1 1 auto;
-	background-color: #f0edcf;
+	backdrop-filter: blur(5px) saturate(180%);
+    border-radius: 30px;
+    padding: 15px;
+    border: 2px solid white;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .form-container {
-	color: #000;
+	color: white;
 	padding: 30px;
-    border: 2px solid black;
+    margin-right: 2%;
+    
 }
 
 .contact-info-title {
-	color: black;
+	color: white;
 }
 
 .form-row {
@@ -147,7 +178,8 @@ nav ul li a:hover {
 		margin-top: 40px;
 	} 
 	.col-1{
-	width:100%;
+	width:auto;
+    margin-right: 2%;
 	}
 }
 
@@ -167,7 +199,7 @@ nav ul li a:hover {
         justify-content: center;
       
     }
-    .container {
+    .headcontainer {
         border: 1px solid;
         display: flex;
         flex-direction: column;
