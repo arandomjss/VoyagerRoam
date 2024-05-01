@@ -58,13 +58,24 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
-
+.background{
+    position: relative;
+    background-image: url('https://c.pxhere.com/photos/f7/e2/city_new_york_building_empire_state_building_skyscraper-101917.jpg!d');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      width: 100%;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 .main-card{
     display: block;
     border: 1px solid #f0edcf;
     background-color: #40a2db;
     padding: 20px;
-    margin: 5% 10% 5% 10%;
+    margin: 0% 10% 0% 10%;
     transition: transform 0.2s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 80%;

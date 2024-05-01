@@ -58,6 +58,18 @@ nav ul li a::after{
 nav ul li a:hover::after{
   width: 100%;
 }
+.background{
+  position: relative;
+  background-image: url('https://c.pxhere.com/photos/f7/e2/city_new_york_building_empire_state_building_skyscraper-101917.jpg!d');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  padding-top: 10%;
+}
   .container
   {
     display: grid;
@@ -66,8 +78,10 @@ nav ul li a:hover::after{
     background: linear-gradient(to bottom, rgb(6, 108, 100),  rgb(14, 48, 122));
     width: 800px;
     height: 400px;
-    margin: 10% auto;;
+    margin: 0% auto;;
     border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
   }
   
   .content-holder

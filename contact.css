@@ -80,13 +80,15 @@ nav ul li a:hover::after{
     -webkit-backdrop-filter: blur(5px);
     border-radius: 30px;
     color: white;
-    padding: 15px;
+    padding: 10px;
     border: 2px solid white;
     margin-right: 4%;
+    font-weight: 600;
 }
 
 .content {
     color: white;
+    font-weight: 600;
 	display: flex;
 	margin-top: 40px;
     justify-content: space-around;
