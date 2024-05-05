@@ -330,11 +330,31 @@ nav ul li a:hover {
     color: #f0edcf;
    font-size: large;
 }
-
-#footer {
+#footer .foot-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     background-color: black;
     color: #40a2db;
     padding: 20px 0;
+}
+
+.footer-top, .newsletter, .footer-nav {
+    flex: 1 0 20%;
+    margin: 10px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    #footer .foot-container {
+        flex-direction: column;
+    }
+
+    .footer-top, .newsletter, .footer-nav {
+        flex: none;
+        width: 100%;
+    }
 }
 
 .foot-container {
@@ -397,12 +417,32 @@ nav ul li a:hover {
 }
 .footer-nav {
     margin: 20px 0;
+    border-bottom: none;
 }
 .footer-links a:hover,
 .footer-nav a:hover {
     font-size: 1.2rem;
     color: white;
     transition: 1.5s;
+}
+.footer-links a,
+.footer-nav a {
+    color: #40a2db;
+    text-decoration: none;
+    font-size: larger;
+}
+.footer-links a::after,
+.footer-nav a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .3s;
+}
+.footer-links a:hover::after,
+.footer-nav a:hover::after{
+    width: 100%;
 }
 
 .social-media a:hover,

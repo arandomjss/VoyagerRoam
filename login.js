@@ -17,3 +17,14 @@ function login()
     document.querySelector(".button-1").style.cssText = "display: block";
     document.querySelector(".hello").style.cssText = "color: white";
 }
+function showAlert(message) {
+    var alert = document.getElementById('alert');
+    var alertMessage = document.getElementById('alert-message');
+
+    alertMessage.innerHTML = message;
+    alert.classList.add('show');
+
+    setTimeout(function() {
+        alert.classList.remove('show');
+    }, 1500);
+}

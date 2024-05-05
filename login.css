@@ -160,18 +160,10 @@ nav ul li a:hover::after{
     outline: none;
     background-color: rgb(56, 102, 189);
   }
-  
-  
-  
   .button-2
   {
     display: none;
   }
-  
-  
-  
-  
-  
   .signup-form-container
   {
     position: relative;
@@ -201,6 +193,28 @@ nav ul li a:hover::after{
     outline: none;
     background-color: #f0edcf;  
   }
+  .alert {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #0b60b0;
+    color: #f0edcf;
+    text-align: center;
+    border: 1px solid #f0edcf;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 50%;
+    font-size: 17px;
+    transition: visibility 1.5s, opacity 1.5s linear;
+}
+
+.alert.show {
+    visibility: visible;
+    opacity: 1;
+}
 @media (min-width: 319px) and (max-width:480px)
     { 
         .vr{
@@ -291,8 +305,26 @@ nav ul li a:hover::after{
 .footer-nav a:hover {
     font-size: 1.2rem;
     color: white;
-    padding-bottom: 7px;
     transition: 0.5s;
+}
+.footer-links a,
+.footer-nav a {
+    color: #40a2db;
+    text-decoration: none;
+    font-size: larger;
+}
+.footer-links a::after,
+.footer-nav a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .3s;
+}
+.footer-links a:hover::after,
+.footer-nav a:hover::after{
+    width: 100%;
 }
 .social-media a:hover,
 .social-media img:hover{

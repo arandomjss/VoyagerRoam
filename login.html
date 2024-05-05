@@ -34,6 +34,9 @@
             </div>
         </div>
   
+        <div id="alert" class="alert">
+            <span id="alert-message"></span>
+        </div>
         
         <div class="box-2">
             <div class="login-form-container">
@@ -42,7 +45,7 @@
                 <br><br>
                 <input type="password" placeholder="Password" class="input-field">
                 <br><br>
-                <button class="login-button" type="button">Login</button>
+                <button class="login-button" type="button" onclick="showAlert('Login successful!')">Login</button>
             </div>
   
             <div class="signup-form-container">
@@ -53,7 +56,7 @@
             <br><br>
             <input type="password" placeholder="Password" class="input-field">
             <br><br>
-            <button class="signup-button" type="button">Sign Up</button>
+            <button class="signup-button" type="button" onclick="showAlert('Signup successful!')">Sign Up</button>
             </div>
         </div>
     </div>
@@ -83,7 +86,7 @@
                 <a href="#destinations">Destinations</a>
                 <a href="./contact.html">Contact</a>
             </div>
-            <p>&copy; 2022 VoyagerRoam. All rights reserved.</p>
+            <p>&copy; 2024 VoyagerRoam. All rights reserved.</p>
         </div>
     </footer>
     <script src="login.js"></script>

@@ -229,8 +229,26 @@ nav ul li a:hover::after{
 .footer-nav a:hover {
     font-size: 1.2rem;
     color: white;
-    padding-bottom: 7px;
     transition: 0.5s;
+}
+.footer-links a,
+.footer-nav a {
+    color: #40a2db;
+    text-decoration: none;
+    font-size: larger;
+}
+.footer-links a::after,
+.footer-nav a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .3s;
+}
+.footer-links a:hover::after,
+.footer-nav a:hover::after{
+    width: 100%;
 }
 .social-media a:hover,
 .social-media img:hover{
