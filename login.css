@@ -60,7 +60,7 @@ nav ul li a:hover::after{
 }
 .background{
   position: relative;
-  background-image: url('https://c.pxhere.com/photos/f7/e2/city_new_york_building_empire_state_building_skyscraper-101917.jpg!d');
+  background-image: url('https://images.pexels.com/photos/1619569/pexels-photo-1619569.jpeg?cs=srgb&dl=pexels-apasaric-1619569.jpg&fm=jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -120,7 +120,6 @@ nav ul li a:hover::after{
   
   .box-2{
     background-color: white;
-  
     margin: 5px;
   }
   
@@ -214,6 +213,11 @@ nav ul li a:hover::after{
 .alert.show {
     visibility: visible;
     opacity: 1;
+}
+@media (max-width: 800px) {
+  .container {
+      width: 100%;
+  }
 }
 @media (min-width: 319px) and (max-width:480px)
     { 

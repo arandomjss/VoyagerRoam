@@ -4,7 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tokyo</title>
-    <link rel="stylesheet" href="tokyo.css">
+    <style>
+        body {
+            background-color: #40a2db; 
+            color: #000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        
+        .heading-section {
+            height: 100vh;
+            background-image: url("https://images2.alphacoders.com/499/499330.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            backdrop-filter: blur(5px);
+        }
+
+        @media (min-width: 319px) and (max-width:480px)
+        {
+            .headingback {
+                padding: 20px 30px;
+                font-size: large;
+            }
+        }
+        h1 {
+            color: #e4d099;
+            text-align: center;
+        }
+        .headingback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            font-size: xx-large;
+            backdrop-filter: blur(5px) saturate(10%);
+             
+        }
+        .attraction {
+            background-color: #0b60b0;
+            color: #e4d099;
+            padding: 20px;
+            margin-bottom: 20px;
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .attraction img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .feature {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        @media (max-width: 800px) {
+            .features {
+                flex-direction: column;
+            }
+            .feature {
+                flex: none;
+                width: 100%;
+            }
+        }
+        
+        .attractions-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            margin-left: 10px;
+            justify-content: center;
+            margin-top: 10px;
+
+        }
+        header .container {
+            border: 1px solid;
+            display: flex;
+            justify-content: space-between;
+        }
+        .vr h1{
+            justify-content: center;
+            color: #40a2db;
+        }
+        .logo{
+            align-self: center;
+        }
+        header {
+            background-color: #000000;
+            padding-bottom: 1px;
+            color: #40a2db;
+        }
+        
+        header h1 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin-left: 0px;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline-flex;
+            margin: 10px;
+        }
+        
+        nav ul li a {
+            color: #40a2db;
+            text-decoration: none;
+            font-size: larger;
+        }
+        
+        nav ul li a:hover {
+            font-size: 1.2rem;
+            color: white;
+            transition: 1.5s;
+        }
+        nav ul li a::after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width .3s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+        @media (min-width: 319px) and (max-width:480px)
+    { 
+        .vr{
+            text-align: center;
+            color: #40a2db;
+        }
+        nav ul li{
+        display: flex;
+        justify-content: center;
+      
+        }
+        .container {
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        }
+        nav ul li a {
+        text-align: center;
+        }
+        .mainimg{
+        width: 100%;
+        height: auto;
+        }
+    }
+    #footer {
+        background-color: black;
+        color: #40a2db;
+        padding: 20px 0;
+    }
+    
+    .foot-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-links,
+    .social-media,
+    .footer-nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links a,
+    .social-media a,
+    .footer-nav a {
+        color: #40a2db;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    
+    .social-media img {
+        margin-top: 15px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .newsletter {
+        margin: 10px 0; 
+        color: #ffffff;
+    }
+    
+    .newsletter form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .newsletter input {
+        padding: 10px;
+        margin-right: 10px;
+        border: none;
+    }
+    
+    .newsletter button {
+        padding: 10px;
+        border: none;
+        background-color: #e8491d;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    
+    .footer-nav {
+        margin: 20px 0;
+    }
+    .footer-links a:hover,
+    .footer-nav a:hover {
+        font-size: 1.2rem;
+        color: white;
+        transition: 0.5s;
+    }
+    .footer-links a,
+    .footer-nav a {
+        color: #40a2db;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .footer-links a::after,
+    .footer-nav a::after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width .3s;
+    }
+    .footer-links a:hover::after,
+    .footer-nav a:hover::after{
+        width: 100%;
+    }
+    .social-media a:hover,
+    .social-media img:hover{
+        transform: scale(1.1);
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -23,37 +288,42 @@
             </nav>
         </div>
     </header>
-<div class="background">
-    <div class="main-card">
-      <h2 class="city-head"> Tokyo, Japan</h2>
-        <div class="content-card">
-            <img class="mainimg" src="https://t3.ftcdn.net/jpg/04/98/23/10/360_F_498231018_6w6Zt0h2PdU4Muy5Tvph2VeNG67yTuwl.jpg" alt="tokyo">
-            <h3 class="nickname">"The City That Never Sleeps"</h3>
-            <p class="first"> Tokyo offers a plethora of unique experiences. Attend a traditional Kabuki performance, an elaborate form of Japanese dance-drama.  Catch a sumo wrestling tournament, a fascinating display of power and tradition.  Immerse yourself in the vibrant world of Japanese anime and manga in the district of Akihabara. </p>
-            <p class="second"> Tokyo boasts an extensive and efficient public transportation system, making it easy to navigate the city.  The Tokyo Metro, one of the busiest subway systems globally, offers a convenient and affordable way to travel. </p>
-            <p class="third">Here are some of the reasons why you should visit Tokyo:</p>
-            <ul class="list">
-                <li>
-                    <span class="pointer">Rich History and Culture:  </span>Tokyo boasts a long and fascinating history, dating back centuries. Visitors can explore this rich heritage by visiting ancient temples and shrines.
-                </li>
-                <li>
-                    <span class="pointer">Electrifying Nightlife:</span> Tokyo's nightlife is legendary, with bustling districts like Shibuya and Shinjuku offering a wide variety of bars, clubs, and karaoke spots.
-                </li>
-                <li>
-                    <span class="pointer">Foodie Paradise:</span> Tokyo is a haven for food lovers, with a seemingly endless variety of restaurants serving everything from traditional Japanese cuisine to international fare.
-                </li>
-                <li>
-                    <span class="pointer">Cutting-Edge Technology:</span> Tokyo is a global leader in innovation and technology. Visitors can experience the future firsthand by visiting the Miraikan National Museum of Emerging Science and Innovation, or by exploring the high-tech district of Akihabara.
-                </li>
-                <li>
-                    <span class="pointer" >Peaceful Green Spaces:</span> Despite its urban jungle feel, Tokyo offers a surprising number of serene green spaces. Take a break from the crowds and enjoy a peaceful stroll through the Imperial Palace East Garden.
-                </li>
-            </ul>
-            <p class="last">
-                Whether you're interested in history, culture, food, or cutting-edge technology, Tokyo has something to offer everyone.  So come experience the magic of "The City That Never Sleeps" for yourself!
-            </p>
-                </div>
+    <div class="info"><section class="heading-section">
+        <div class="headingback"><h1>Welcome to Tokyo!!</h1></div>
+    </section>
+   <div class="attractions-container"> 
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 1">
+        <h2>Attraction 1</h2>
+        <p>Description of Attraction 1</p>
+        </section>
+    
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 2">
+        <h2>Attraction 2</h2>
+        <p>Description of Attraction 2</p>
+        </section>
+    
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 3">
+        <h2>Attraction 3</h2>
+        <p>Description of Attraction 3</p>
+        </section>
     </div>
+    <section class="features">
+        <div class="feature">
+            <h2>Electrifying Nightlife</h2>
+            <p>Tokyo's nightlife is legendary, with bustling districts like Shibuya and Shinjuku offering a wide variety of bars, clubs, and karaoke spots.</p>
+        </div>
+        <div class="feature">
+            <h2>Cutting-Edge Technology</h2>
+            <p> Tokyo is a global leader in innovation and technology. Visitors can experience the future firsthand by visiting the Miraikan National Museum of Emerging Science and Innovation, or by exploring the high-tech district of Akihabara. </p>
+        </div>
+        <div class="feature">
+            <h2>Rich History and Culture</h2>
+            <p> Tokyo boasts a long and fascinating history, dating back centuries. Visitors can explore this rich heritage by visiting ancient temples and shrines.</p>
+        </div>
+    </section>
 </div>
     <footer id="footer">
         <div class="foot-container">

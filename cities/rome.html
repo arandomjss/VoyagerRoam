@@ -4,7 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rome</title>
-    <link rel="stylesheet" href="paris.css">
+    <style>
+        body {
+            background-color: #40a2db; 
+            color: #000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        
+        .heading-section {
+            height: 100vh;
+            background-image: url("https://images.pexels.com/photos/3021382/pexels-photo-3021382.jpeg?cs=srgb&dl=pexels-azhar-muhammedu-152002-3021382.jpg&fm=jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            backdrop-filter: blur(5px);
+        }
+
+        @media (max-width: 800px) {
+            .heading-section {
+            background-size:cover;
+            background-repeat: no-repeat;
+            }
+        }
+        h1 {
+            color: #e4d099;
+            text-align: center;
+        }
+        .headingback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            font-size: xx-large;
+            backdrop-filter: blur(5px) saturate(10%);
+             
+        }
+        @media (min-width: 319px) and (max-width:480px)
+        {
+            .headingback {
+                padding: 20px 30px;
+                font-size: large;
+            }
+        }
+        .attraction {
+            background-color: #0b60b0;
+            color: #e4d099;
+            padding: 20px;
+            margin-bottom: 20px;
+            flex: 1;
+            margin-right: 20px;
+            max-width: 480px;
+        }
+        
+        .attraction img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .feature {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        @media (max-width: 800px) {
+            .features {
+                flex-direction: column;
+            }
+            .feature {
+                flex: none;
+                width: 100%;
+            }
+        }
+        
+        .attractions-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            margin-left: 10px;
+            justify-content: center;
+            margin-top: 10px;
+
+        }
+        header .container {
+            border: 1px solid;
+            display: flex;
+            justify-content: space-between;
+        }
+        .vr h1{
+            justify-content: center;
+            color: #40a2db;
+        }
+        .logo{
+            align-self: center;
+        }
+        header {
+            background-color: #000000;
+            padding-bottom: 1px;
+            color: #40a2db;
+        }
+        
+        header h1 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin-left: 0px;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline-flex;
+            margin: 10px;
+        }
+        
+        nav ul li a {
+            color: #40a2db;
+            text-decoration: none;
+            font-size: larger;
+        }
+        
+        nav ul li a:hover {
+            font-size: 1.2rem;
+            color: white;
+            transition: 1.5s;
+        }
+        nav ul li a::after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width .3s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+        @media (min-width: 319px) and (max-width:480px)
+    { 
+        .vr{
+            text-align: center;
+            color: #40a2db;
+        }
+        nav ul li{
+        display: flex;
+        justify-content: center;
+      
+        }
+        .container {
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        }
+        nav ul li a {
+        text-align: center;
+        }
+        .mainimg{
+        width: 100%;
+        height: auto;
+        }
+    }
+    #footer {
+        background-color: black;
+        color: #40a2db;
+        padding: 20px 0;
+    }
+    
+    .foot-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-links,
+    .social-media,
+    .footer-nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links a,
+    .social-media a,
+    .footer-nav a {
+        color: #40a2db;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    
+    .social-media img {
+        margin-top: 15px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .newsletter {
+        margin: 10px 0; 
+        color: #ffffff;
+    }
+    
+    .newsletter form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .newsletter input {
+        padding: 10px;
+        margin-right: 10px;
+        border: none;
+    }
+    
+    .newsletter button {
+        padding: 10px;
+        border: none;
+        background-color: #e8491d;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    
+    .footer-nav {
+        margin: 20px 0;
+    }
+    .footer-links a:hover,
+    .footer-nav a:hover {
+        font-size: 1.2rem;
+        color: white;
+        transition: 0.5s;
+    }
+    .footer-links a,
+    .footer-nav a {
+        color: #40a2db;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .footer-links a::after,
+    .footer-nav a::after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width .3s;
+    }
+    .footer-links a:hover::after,
+    .footer-nav a:hover::after{
+        width: 100%;
+    }
+    .social-media a:hover,
+    .social-media img:hover{
+        transform: scale(1.1);
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -23,37 +295,42 @@
             </nav>
         </div>
     </header>
-<div class="background">
-    <div class="main-card">
-      <h2 class="city-head"> Rome, Italy</h2>
-        <div class="content-card">
-            <img class="mainimg" src="https://www.italyperfect.com/cdn-cgi/image/format=auto,width=1256/https://www.italyperfect.com/g/photos/upload/sml_845543004-1590582528-ip-info-rome.jpg" alt="paris">
-            <h3 class="nickname">"The City of Lights"</h3>
-            <p class="first"> The iconic Eiffel Tower pierces the clouds, a constant reminder of the city's innovative spirit.  But Paris is more than just grand landmarks. </p>
-            <p class="second">  Delve into hidden courtyards, stumble upon charming cafes tucked away on cobbled streets, and lose yourself in the city's artistic soul at the Louvre or Musée d'Orsay.</p>
-            <p class="third">Here's a taste of what awaits you in France:</p>
-            <ul class="list">
-                <li>
-                    <span class="pointer">Experience the City of Romance: </span>Paris is a city that exudes romance.  Stroll hand-in-hand with your loved one along the Champs-Élysées, or whisper sweet nothings beneath the twinkling Eiffel Tower. 
-                </li>
-                <li>
-                    <span class="pointer">Beyond the Tourist Trail:</span> While the iconic landmarks are must-sees, venture beyond the tourist trail to discover hidden gems. Explore the bohemian neighborhood of Montmartre, or visit the Père Lachaise Cemetery.
-                </li>
-                <li>
-                    <span class="pointer">A City for All Seasons:</span> Paris is a city that can be enjoyed year-round. Spring brings vibrant blooms to the city's parks, while summer offers the perfect weather for outdoor exploration.  
-                </li>
-                <li>
-                    <span class="pointer">Indulge in Parisian Delights: </span>French cuisine is legendary, and Paris is a paradise for gourmands. Savor flaky croissants in a quaint cafe, or treat yourself to a Michelin-starred dining experience. 
-                </li>
-                <li>
-                    <span class="pointer" >Immerse Yourself in Art and History: </span> Paris is a treasure trove of art and history. Gaze upon the iconic Mona Lisa at the Louvre, or wander the majestic halls of the Palace of Versailles.
-                </li>
-            </ul>
-            <p class="last">
-                So, why wait?  Plan your trip to the City of Lights and discover the magic of Paris for yourself!
-            </p>
-                </div>
+    <div class="info"><section class="heading-section">
+        <div class="headingback"><h1>Welcome to Rome!!</h1></div>
+    </section>
+   <div class="attractions-container"> 
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 1">
+        <h2>Attraction 1</h2>
+        <p>Description of Attraction 1</p>
+        </section>
+    
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 2">
+        <h2>Attraction 2</h2>
+        <p>Description of Attraction 2</p>
+        </section>
+    
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 3">
+        <h2>Attraction 3</h2>
+        <p>Description of Attraction 3</p>
+        </section>
     </div>
+    <section class="features">
+        <div class="feature">
+            <h2>Transported to History </h2>
+            <p>tep into the gladiatorial arena of the Colosseum, where emperors once watched epic battles.  Explore the Roman Forum, the heart of the ancient Roman Empire, and stand in awe of the Pantheon, an architectural marvel still in use today.</p>
+        </div>
+        <div class="feature">
+            <h2>Fountain Fairytales</h2>
+            <p>oss a coin into the legendary Trevi Fountain, ensuring your return to Rome.  Wander through Piazza Navona, a vibrant square adorned with Bernini's masterpieces and lively street performers.</p>
+        </div>
+        <div class="feature">
+            <h2>A City of Neighborhoods</h2>
+            <p> Explore charming Trastevere, a bohemian enclave known for its trattorias and vibrant nightlife.  Climb the Spanish Steps for stunning city views and delve into the trendy shops of the surrounding streets.</p>
+        </div>
+    </section>
 </div>
     <footer id="footer">
         <div class="foot-container">

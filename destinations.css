@@ -94,7 +94,46 @@ nav ul li a:hover::after{
   main {
     padding: 20px;
   }
-  
+  .seven h1 {
+        text-align: center;
+        font-size:30px; font-weight:300; color:#f0edcf; letter-spacing:1px;
+        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+    
+    .seven h1:after,.seven h1:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #f0edcf;
+        border-top: 1px solid #f0edcf;
+        height: 5px;
+      background-color:#0b60b0;
+    }
+    @media (max-width: 595px) {
+        .seven h1 {
+            color: #f0edcf;
+            font-size: 20px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 27px auto;
+            grid-gap: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .seven h1:after,
+        .seven h1:before {
+            content: " ";
+            display: block;
+            border-bottom: 1px solid #f0edcf;
+            border-top: 1px solid #f0edcf;
+            height: 2px;
+            background-color: #0b60b0;
+        }
+    }
   .destination-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,9 +161,10 @@ nav ul li a:hover::after{
   }
   
   article a {
+    font-weight: 600;
     text-decoration: none;
     color: #f0edcf;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border: 1px solid #f0edcf;
     border-radius: 3px;
     margin-top: 10px;

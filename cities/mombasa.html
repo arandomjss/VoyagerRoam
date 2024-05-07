@@ -4,7 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mombasa</title>
-    <link rel="stylesheet" href="mombasa.css">
+    <style>
+        body {
+            background-color: #40a2db; 
+            color: #000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        
+        .heading-section {
+            height: 100vh;
+            background-image: url("https://i.pinimg.com/originals/de/fc/f0/defcf0220f8481e68dc088a56669cb34.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            backdrop-filter: blur(5px);
+        }
+
+        @media (max-width: 800px) {
+            .heading-section {
+            background-size:cover;
+            background-repeat: no-repeat;
+            }
+        }
+        h1 {
+            color: #e4d099;
+            text-align: center;
+        }
+        .headingback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            font-size: xx-large;
+            backdrop-filter: blur(5px) saturate(10%);
+             
+        }
+        @media (min-width: 319px) and (max-width:480px)
+        {
+            .headingback {
+                padding: 20px 30px;
+                font-size: large;
+            }
+        }
+        .attraction {
+            background-color: #0b60b0;
+            color: #e4d099;
+            padding: 20px;
+            margin-bottom: 20px;
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .attraction img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .feature {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        @media (max-width: 800px) {
+            .features {
+                flex-direction: column;
+            }
+            .feature {
+                flex: none;
+                width: 100%;
+            }
+        }
+        
+        .attractions-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            margin-left: 10px;
+            justify-content: center;
+            margin-top: 10px;
+
+        }
+        header .container {
+            border: 1px solid;
+            display: flex;
+            justify-content: space-between;
+        }
+        .vr h1{
+            justify-content: center;
+            color: #40a2db;
+        }
+        .logo{
+            align-self: center;
+        }
+        header {
+            background-color: #000000;
+            padding-bottom: 1px;
+            color: #40a2db;
+        }
+        
+        header h1 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin-left: 0px;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline-flex;
+            margin: 10px;
+        }
+        
+        nav ul li a {
+            color: #40a2db;
+            text-decoration: none;
+            font-size: larger;
+        }
+        
+        nav ul li a:hover {
+            font-size: 1.2rem;
+            color: white;
+            transition: 1.5s;
+        }
+        nav ul li a::after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width .3s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+        @media (min-width: 319px) and (max-width:480px)
+    { 
+        .vr{
+            text-align: center;
+            color: #40a2db;
+        }
+        nav ul li{
+        display: flex;
+        justify-content: center;
+      
+        }
+        .container {
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        }
+        nav ul li a {
+        text-align: center;
+        }
+        .mainimg{
+        width: 100%;
+        height: auto;
+        }
+    }
+    #footer {
+        background-color: black;
+        color: #40a2db;
+        padding: 20px 0;
+    }
+    
+    .foot-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-links,
+    .social-media,
+    .footer-nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links a,
+    .social-media a,
+    .footer-nav a {
+        color: #40a2db;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    
+    .social-media img {
+        margin-top: 15px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .newsletter {
+        margin: 10px 0; 
+        color: #ffffff;
+    }
+    
+    .newsletter form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .newsletter input {
+        padding: 10px;
+        margin-right: 10px;
+        border: none;
+    }
+    
+    .newsletter button {
+        padding: 10px;
+        border: none;
+        background-color: #e8491d;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    
+    .footer-nav {
+        margin: 20px 0;
+    }
+    .footer-links a:hover,
+    .footer-nav a:hover {
+        font-size: 1.2rem;
+        color: white;
+        transition: 0.5s;
+    }
+    .footer-links a,
+    .footer-nav a {
+        color: #40a2db;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .footer-links a::after,
+    .footer-nav a::after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width .3s;
+    }
+    .footer-links a:hover::after,
+    .footer-nav a:hover::after{
+        width: 100%;
+    }
+    .social-media a:hover,
+    .social-media img:hover{
+        transform: scale(1.1);
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -23,37 +294,42 @@
             </nav>
         </div>
     </header>
-<div class="background">    
-    <div class="main-card">
-      <h2 class="city-head"> Mombasa, Kenya</h2>
-        <div class="content-card">
-            <img class="mainimg" src="https://media.istockphoto.com/id/1455430684/photo/drone-shot-over-the-beach-of-the-coastal-part-of-mombasa-kenya-at-sunrise.webp?b=1&s=170667a&w=0&k=20&c=ZesZlxGxHejmKg1zWoA5PnSkgjL3COJDtZAOj3uPXyA=" alt="mombasa">
-            <h3 class="nickname">"The Swahili Coast Jewel"</h3>
-            <p class="first"> Dive into paradise on the sunny shores of Mombasa, Kenya! Nicknamed "The Island Paradise" or "The Swahili Coast Jewel," Mombasa offers a vibrant blend of cultural riches, dazzling beaches, and exciting adventures. </p>
-            <p class="second"> Mombasa is a melting pot of cultures, reflected in its delicious cuisine. Savor the unique blend of Swahili, Arabic, Indian, and European influences in dishes like fresh seafood curries, aromatic stews, and flavorful flatbreads.</p>
-            <p class="third">Here's a taste of what awaits you in Mombasa:</p>
-            <ul class="list">
-                <li>
-                    <span class="pointer">Relax on Pristine Beaches: </span>Mombasa boasts some of Kenya's most stunning beaches.The crystal-clear turquoise waters of the Indian Ocean are perfect for swimming, snorkeling, or simply soaking up the beauty. 
-                </li>
-                <li>
-                    <span class="pointer">Go on a Marine Adventure:</span> Mombasa is a haven for water enthusiasts.  Explore the wonders of the Mombasa Marine National Park, a protected area teeming with colorful coral reefs, diverse marine life, and playful dolphins.  Snorkel or scuba dive amidst the vibrant underwater world, or take a glass-bottom boat tour for a glimpse into the ocean's magic.
-                </li>
-                <li>
-                    <span class="pointer">Wildlife Encounters:</span> Not just a beach destination, Mombasa offers exciting wildlife experiences. Visit Haller Park, a sanctuary dedicated to wildlife conservation.  See giraffes, zebras, antelopes, and even crocodiles roaming freely in this unique environment. 
-                </li>
-                <li>
-                    <span class="pointer">Thrilling Activities: </span> Mombasa offers something for the adventurous soul.  Go kitesurfing or windsurfing on the waves, or try deep-sea fishing for a chance to catch a trophy fish. 
-                </li>
-                <li>
-                    <span class="pointer" >Explore a Historic City: </span> Mombasa's Old Town is a treasure trove of history and culture.  Wander through the narrow, winding streets lined with traditional Swahili architecture.
-                </li>
-            </ul>
-            <p class="last">
-                Mombasa is your gateway to an unforgettable Kenyan adventure.  So come discover "The Island Paradise" and create memories that will last a lifetime!
-            </p>
-                </div>
+    <div class="info"><section class="heading-section">
+        <div class="headingback"><h1>Welcome to Mombasa!!</h1></div>
+    </section>
+   <div class="attractions-container"> 
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 1">
+        <h2>Attraction 1</h2>
+        <p>Description of Attraction 1</p>
+        </section>
+    
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 2">
+        <h2>Attraction 2</h2>
+        <p>Description of Attraction 2</p>
+        </section>
+    
+        <section class="attraction">
+        <img src="../VoyagerRoam/images/dubai.jpg" alt="Dubai Attraction 3">
+        <h2>Attraction 3</h2>
+        <p>Description of Attraction 3</p>
+        </section>
     </div>
+    <section class="features">
+        <div class="feature">
+            <h2>Relax on Pristine Beaches</h2>
+            <p>Mombasa boasts some of Kenya's most stunning beaches.The crystal-clear turquoise waters of the Indian Ocean are perfect for swimming, snorkeling, or simply soaking up the beauty.</p>
+        </div>
+        <div class="feature">
+            <h2>Thrilling Activities</h2>
+            <p> Mombasa offers something for the adventurous soul.  Go kitesurfing or windsurfing on the waves, or try deep-sea fishing for a chance to catch a trophy fish. </p>
+        </div>
+        <div class="feature">
+            <h2>Wildlife Encounters</h2>
+            <p> Not just a beach destination, Mombasa offers exciting wildlife experiences. Visit Haller Park, a sanctuary dedicated to wildlife conservation.  See giraffes, zebras, antelopes, and even crocodiles roaming freely in this unique environment.</p>
+        </div>
+    </section>
 </div>
     <footer id="footer">
         <div class="foot-container">
