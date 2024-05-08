@@ -73,6 +73,29 @@
             max-height: 200px;
             object-fit: cover;
             margin-bottom: 10px;
+            transition: transform 0.7s ease-in-out;
+        }
+        .attraction img:hover{
+            transform: scale(1.06);
+        }
+        .seven h1 {
+            text-align: center;
+            font-size:30px; font-weight:300; color:#f0edcf; letter-spacing:1px;
+            text-transform: uppercase;
+            display: grid;
+            grid-template-columns: 1fr max-content 1fr;
+            grid-template-rows: 27px 0;
+            grid-gap: 20px;
+            align-items: center;
+        }
+        
+        .seven h1:after,.seven h1:before {
+            content: " ";
+            display: block;
+            border-bottom: 1px solid #f0edcf;
+            border-top: 1px solid #f0edcf;
+            height: 5px;
+          background-color:#40a2db;
         }
         .features {
             display: flex;
@@ -85,6 +108,10 @@
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
+            border: 1px solid #e4d099;
+            border-radius: 10px;
+            background-color: #0b60b0;
+            color: #e4d099;
         }
         @media (max-width: 800px) {
             .features {
@@ -92,7 +119,7 @@
             }
             .feature {
                 flex: none;
-                width: 100%;
+                width: 97%;
             }
         }
         
@@ -299,8 +326,11 @@
         </div>
     </header>
     <div class="info"><section class="heading-section">
-        <div class="headingback"><h1>Welcome to Mombasa!!</h1></div>
+        <div class="headingback"><h1>Welcome to "The White and Blue City", Mombasa!!</h1></div>
     </section>
+    <div class="seven">
+        <h1 >ATTRACTIONS</h1>
+        </div>
    <div class="attractions-container"> 
         <section class="attraction">
         <img src="https://museums.or.ke/wp-content/uploads/2023/12/Fort-Jesus-an-attraction-built-in-1593-and-declared-a-UNESCO-World-Heritage-site-in-2011-1024x681.jpg" alt="Dubai Attraction 1">
@@ -320,6 +350,9 @@
         <p>Experience the underwater paradise of Mombasa Marine National Park and Reserve, Kenya's oldest marine park. Renowned for its coral reefs teeming with marine life, the park offers excellent snorkeling and diving opportunities.  </p>
         </section>
     </div>
+    <div class="seven">
+        <h1 >FEATURES</h1>
+        </div>
     <section class="features">
         <div class="feature">
             <h2>Relax on Pristine Beaches</h2>

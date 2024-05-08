@@ -72,6 +72,29 @@
             max-height: 200px;
             object-fit: cover;
             margin-bottom: 10px;
+            transition: transform 0.7s ease-in-out;
+        }
+        .attraction img:hover{
+            transform: scale(1.06);
+        }
+        .seven h1 {
+            text-align: center;
+            font-size:30px; font-weight:300; color:#f0edcf; letter-spacing:1px;
+            text-transform: uppercase;
+            display: grid;
+            grid-template-columns: 1fr max-content 1fr;
+            grid-template-rows: 27px 0;
+            grid-gap: 20px;
+            align-items: center;
+        }
+        
+        .seven h1:after,.seven h1:before {
+            content: " ";
+            display: block;
+            border-bottom: 1px solid #f0edcf;
+            border-top: 1px solid #f0edcf;
+            height: 5px;
+          background-color:#40a2db;
         }
         .features {
             display: flex;
@@ -84,6 +107,10 @@
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
+            border: 1px solid #e4d099;
+            border-radius: 10px;
+            background-color: #0b60b0;
+            color: #e4d099;
         }
         @media (max-width: 800px) {
             .features {
@@ -91,7 +118,7 @@
             }
             .feature {
                 flex: none;
-                width: 100%;
+                width: 97%;
             }
         }
         
@@ -298,8 +325,11 @@
         </div>
     </header>
     <section class="heading-section">
-        <div class="headingback"><h1>Welcome to Dubai!</h1></div>
+        <div class="headingback"><h1>Welcome to "The City of Gold", Dubai!!</h1></div>
     </section>
+    <div class="seven">
+        <h1 >ATTRACTIONS</h1>
+        </div>
    <div class="attractions-container"> 
         <section class="attraction">
         <img src="https://t4.ftcdn.net/jpg/02/96/38/97/360_F_296389786_DjGwAjTSlIMGPo2arG60g73lJMWIMXdP.jpg" alt="Dubai Attraction 1">
@@ -319,6 +349,9 @@
         <p>This is one of the largest malls in the world, and it houses over 1,200 stores. The mall also has an aquarium, an ice rink, and a VR park.</p>
         </section>
     </div>
+    <div class="seven">
+        <h1 >FEATURES</h1>
+        </div>
     <section class="features">
         <div class="feature">
             <h2>Experience the ultimate in luxury</h2>

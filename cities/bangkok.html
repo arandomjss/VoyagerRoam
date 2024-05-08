@@ -73,6 +73,29 @@
             max-height: 200px;
             object-fit: cover;
             margin-bottom: 10px;
+            transition: transform 0.7s ease-in-out;
+        }
+        .attraction img:hover{
+            transform: scale(1.06);
+        }
+        .seven h1 {
+            text-align: center;
+            font-size:30px; font-weight:300; color:#f0edcf; letter-spacing:1px;
+            text-transform: uppercase;
+            display: grid;
+            grid-template-columns: 1fr max-content 1fr;
+            grid-template-rows: 27px 0;
+            grid-gap: 20px;
+            align-items: center;
+        }
+        
+        .seven h1:after,.seven h1:before {
+            content: " ";
+            display: block;
+            border-bottom: 1px solid #f0edcf;
+            border-top: 1px solid #f0edcf;
+            height: 5px;
+          background-color:#40a2db;
         }
         .features {
             display: flex;
@@ -85,6 +108,10 @@
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
+            border: 1px solid #e4d099;
+            border-radius: 10px;
+            background-color: #0b60b0;
+            color: #e4d099;
         }
         @media (max-width: 800px) {
             .features {
@@ -92,7 +119,7 @@
             }
             .feature {
                 flex: none;
-                width: 100%;
+                width: 97%;
             }
         }
         
@@ -299,8 +326,11 @@
         </div>
     </header>
     <div class="info"><section class="heading-section">
-        <div class="headingback"><h1>Welcome to Bangkok!!</h1></div>
+        <div class="headingback"><h1>Welcome to "The Big Mango",Bangkok!!</h1></div>
     </section>
+    <div class="seven">
+        <h1 >ATTRACTIONS</h1>
+        </div>
    <div class="attractions-container"> 
         <section class="attraction">
         <img src="https://a.cdn-hotels.com/gdcs/production168/d707/c3156d7b-ce5a-4a5c-9a99-002b0ff57fe8.jpg?impolicy=fcrop&w=800&h=533&q=medium" alt="Dubai Attraction 1">
@@ -320,6 +350,9 @@
         <p>The largest weekend market in the world, Chatuchak Weekend Market is a shopper's paradise. With over 15,000 vendors selling everything from clothing and souvenirs to handicrafts and local delicacies.</p>
         </section>
     </div>
+    <div class="seven">
+        <h1 >FEATURES</h1>
+        </div>
     <section class="features">
         <div class="feature">
             <h2>Immerse Yourself in Cultural Splendor </h2>
