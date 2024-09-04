@@ -130,13 +130,24 @@ nav ul li a:hover {
     color: white;
     transition: 1.5s;
 }
-.destination-header{
-    font-size: 2rem;
+.seven h1 {
     text-align: center;
-    margin: 0;
-    color: #f0edcf;
-    font-weight: 900;
-    text-decoration: underline;
+    font-size:30px; font-weight:300; color:#f0edcf; letter-spacing:1px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.seven h1:after,.seven h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #f0edcf;
+    border-top: 1px solid #f0edcf;
+    height: 5px;
+  background-color:#0b60b0;
 }
 
 .destination-card {
